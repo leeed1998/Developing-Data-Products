@@ -1,8 +1,8 @@
 #library(shiny) # Load shiny package
 
-setwd('C:/Users/ed/Documents/Coursera/Course9_Developing Data Products')
-Testdata_WJ <- read.csv("Testdata_WJ.csv")
-
+library(RCurl)
+urlfile <- 'https://raw.githubusercontent.com/leeed1998/Developing-Data-Products/master/Testdata_WJ.csv'
+Testdata_WJ <- read.csv(url(urlfile))
 
 
 shinyServer(
